@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini IDE Web</title>
+    <link rel="stylesheet" href="/static/css/estilos.css">
+    <script src="/static/js/script.js" defer></script>
+    <style>
+        .header {
+            position: relative;
+        }
+        #reloj {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .theme-switch {
+            position: absolute;
+            top: 10px;
+            right: 140px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .slogan {
+            font-style: italic;
+            color: #666;
+            margin: 5px 0;
+            text-align: center;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>Mini IDE Web</h2>
+        <h2>Lenguajes y Autómatas I</h2>
+        <h2 style="font-size: 0.8em; color: #666; margin: 2px 0;">Hecho por: Rivera Couoh Yael Eduardo</h2>
+        <div style="text-align: center; margin: 2px 0;">
+            <img src="/static/img/sen white.png" alt="SEN" style="max-width: 60px; height: auto;">
+        </div>
+        <p class="slogan">For those who believe</p>
+        <div class="theme-switch">
+            <label class="switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div id="reloj"></div>
+    </div>
+
+    <div class="editor-container">
+        <div class="codigo-section">
+            <div class="codigo-area">
+                <textarea id="lineas" rows="20" readonly></textarea>
+                <div id="codigo-container">
+                    <textarea id="codigo" rows="20" spellcheck="false"></textarea>
+                    <div id="overlay"></div>
+                </div>
+            </div>
+            <div class="botones-container">
+                <button id="btnLexico">Analizador Léxico</button>
+                <button id="btnSintactico">Analizador Sintáctico</button>
+                <button id="btnTuring">Simular Máquina de Turing</button>
+            </div>
+        </div>
+
+        <div class="salida-container">
+            <h3>Salida:</h3>
+            <pre id="salida"></pre>
+        </div>
+    </div>
+</body>
+</html>

@@ -65,12 +65,25 @@
                 <button id="btnLexico">Analizador Léxico</button>
                 <button id="btnSintactico">Analizador Sintáctico</button>
                 <button id="btnTuring">Simular Máquina de Turing</button>
+                <button id="btnTokens">Generar tabla de tokens</button>
             </div>
         </div>
 
         <div class="salida-container">
             <h3>Salida:</h3>
             <pre id="salida"></pre>
+            <div id="tablaTokens" style="display: none;">
+                <h3>Tabla de Tokens Disponibles</h3>
+                <table id="tokensTable" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                    <thead>
+                        <tr>
+                            <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Token</th>
+                            <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
         </div>
     </div>
 </body>

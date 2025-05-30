@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-from lexer import analizar_lexico
+from lexer import analizar_lexico, TOKENS
 from parser import analizar_sintaxis
 from turing import maquina_turing
 
@@ -30,6 +30,17 @@ def turing():
     cadena = request.json['codigo']
     resultado = maquina_turing(cadena)
     return jsonify(resultado=resultado)
+
+@app.route('/obtener_tokens', methods=['GET'])
+def obtener_tokens():
+    ejemplos = {
+        'VARIABLE': 'nombre, edad, contador, x, y',
+        'ASIGNACION': '=',
+        'DIGITO': '0, 1, 2, 3, 4, 5, 6, 7, 8, 9',
+        'OPERADOR': '+, -, *, /',
+        'FIN': ';'
+    }
+    return jsonify(tokens={token: ejemplos[token] for token in TOKENS})
 
 if __name__ == '__main__':
     app.run(debug=True)

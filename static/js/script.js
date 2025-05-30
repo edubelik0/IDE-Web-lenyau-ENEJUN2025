@@ -131,6 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("btnLexico").addEventListener("click", () => analizar("lexico"));
     document.getElementById("btnSintactico").addEventListener("click", () => analizar("sintactico"));
     document.getElementById("btnTuring").addEventListener("click", () => analizar("turing"));
+    document.getElementById("btnTokens").addEventListener("click", mostrarTablaTokens);
 
     // Funcionalidad del tema
     const themeToggle = document.getElementById('themeToggle');
@@ -185,5 +186,41 @@ async function analizar(tipo) {
     } catch (error) {
         console.error("Error al analizar:", error);
         salida.textContent = "Error al procesar la solicitud";
+    }
+}
+
+async function mostrarTablaTokens() {
+    const tablaTokens = document.getElementById('tablaTokens');
+    const btnTokens = document.getElementById('btnTokens');
+    
+    // Si la tabla ya está visible, solo la ocultamos y cambiamos el texto del botón
+    if (tablaTokens.style.display === 'block') {
+        tablaTokens.style.display = 'none';
+        btnTokens.textContent = 'Generar tabla de tokens';
+        return;
+    }
+
+    try {
+        const response = await fetch('/obtener_tokens');
+        const data = await response.json();
+        
+        const tbody = document.querySelector('#tokensTable tbody');
+        tbody.innerHTML = '';
+        
+        for (const [token, ejemplos] of Object.entries(data.tokens)) {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">${token}</td>
+                <td style="border: 1px solid #ddd; padding: 8px; font-family: monospace;">${ejemplos}</td>
+            `;
+            tbody.appendChild(tr);
+        }
+        
+        tablaTokens.style.display = 'block';
+        btnTokens.textContent = 'Cerrar tabla de tokens';
+        document.getElementById('salida').textContent = '';
+    } catch (error) {
+        console.error("Error al obtener tokens:", error);
+        document.getElementById('salida').textContent = "Error al obtener la tabla de tokens";
     }
 }

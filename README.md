@@ -73,9 +73,27 @@ x = 5            // Falta punto y coma
 - Semestre: 6to semextre
 
 ## Evidencias del sistema corriendo
--Analizador léxico
+- Analizador léxico
 
 <img src="/static/img/analizador-lexico.png" width="800" height="400">
+
+- Analizador Sintactico
+
+<img src="/static/img/analizador-sintactico.png" width="800" height="400">
+
+   - Analizador Sintactico resaltando un error
+
+<img src="/static/img/analizador-sintactico-error.png" width="800" height="400">
+
+- Maquina de Turing aceptando una cadena valida
+
+<img src="/static/img/maquina-turing.png" width="800" heigth="400">
+
+   - Maquina de Turing rechazando una cadena incorrecta
+<img src="/static/img/maquina-turing-error.png" width="800" height="400">
+
+   - Maquina de turing resaltando un error cuando no hay una cadena escrita
+<img src="/static/img/maquina-turing-vacia.png" width="800" height="400">
 
 ## Características del IDE
 

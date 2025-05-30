@@ -72,6 +72,10 @@ x = 5            // Falta punto y coma
 - Profesor: I.S.C Kevin David Molina Gómez
 - Semestre: 6to semextre
 
+## Evidencias del sistema corriendo
+-Analizador léxico
+<img src="/static/img/analizador-lexico.png" width="300" height="200">
+
 ## Características del IDE
 
 - Análisis léxico y sintáctico en tiempo real

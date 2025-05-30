@@ -1,5 +1,15 @@
 # Mini IDE Web - Analizador Léxico y Sintáctico
 
+## Información Académica
+
+**Estudiante**
+- Rivera Couoh Yael Eduardo
+
+**Asignatura**
+- Materia: Lenguajes y Autómatas I
+- Profesor: I.S.C Kevin David Molina Gómez
+- Semestre: 6to semextre
+
 ## Instrucciones de Ejecución
 
 1. Asegúrate de tener Python instalado en tu sistema (versión 3.6 o superior)
@@ -62,15 +72,6 @@ x = 5            // Falta punto y coma
 - Subrayado ondulado rojo en las líneas con errores
 - Panel de salida con descripción detallada de errores encontrados
 
-## Información Académica
-
-**Estudiante**
-- Rivera Couoh Yael Eduardo
-
-**Asignatura**
-- Materia: Lenguajes y Autómatas I
-- Profesor: I.S.C Kevin David Molina Gómez
-- Semestre: 6to semextre
 
 ## Evidencias del sistema corriendo
 - Analizador léxico

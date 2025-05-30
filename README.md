@@ -74,7 +74,8 @@ x = 5            // Falta punto y coma
 
 ## Evidencias del sistema corriendo
 -Analizador léxico
-<img src="/static/img/analizador-lexico.png" width="300" height="200">
+
+<img src="/static/img/analizador-lexico.png" width="800" height="400">
 
 ## Características del IDE
 
